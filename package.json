@@ -1,7 +1,7 @@
 {
-  "name": "php_react_starter",
+  "name": "wicked_sales",
   "version": "1.0.0",
-  "description": "Starting setup for ReactJS ReduxJS project with PHP server",
+  "description": "Generic E-Commerce website with ReactJS Client and PHP Backend",
   "main": "index.js",
   "scripts": {
     "start": "node dev_server.js",
