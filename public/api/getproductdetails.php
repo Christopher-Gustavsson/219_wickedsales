@@ -4,6 +4,7 @@
     set_exception_handler('handleError');
 
     require_once('mysqlconnect.php');
+    require_once('config.php');
 
 
     if(empty( $_GET['productId']))
