@@ -7,6 +7,7 @@ import {Route, Switch} from 'react-router-dom';
 import Home from './home';
 import Nav from './nav';
 import NotFound from './404';
+import Cart from './cart';
 
 
 const App = () => (
@@ -16,7 +17,8 @@ const App = () => (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/products" component={ProductRoutes} />
-                <Route  component={NotFound} />
+                <Route path="/cart" component={Cart} />
+                <Route component={NotFound} />
             </Switch>
         </div>
     </div>
