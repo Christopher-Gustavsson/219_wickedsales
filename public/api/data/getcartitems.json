@@ -3,13 +3,13 @@
 	"cartItems": [{
 		"name": "Wicked Thing",
 		"price": 2000,
-		"image": ["images/wickedpic.jpg"],
+		"image": "images/wickedpic.jpg",
 		"quantity": 3,
 		"id": 1
 	}, {
 		"name": "Wicked Shoes",
 		"price": 42150,
-		"image": ["images/wickedshoes.jpg"],
+		"image": "images/wickedshoes.jpg",
 		"quantity": 2,
 		"id": 2
 	}],
@@ -18,3 +18,4 @@
 		"total": 90000
 	}
 }
+
