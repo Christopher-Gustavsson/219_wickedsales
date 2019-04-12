@@ -14,7 +14,7 @@ class ProductAdd extends Component{
             totalPrice: 0,
             cartQty: 0
         }
-
+        
         this.decrementQty = this.decrementQty.bind(this);
         this.incrementQty = this.incrementQty.bind(this);
         this.addToCart = this.addToCart.bind(this);
