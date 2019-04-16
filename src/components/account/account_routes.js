@@ -5,7 +5,6 @@ import SignIn from './sign_in';
 
 export default props => {
     const { match } = props;
-    console.log("Match", match);
     return (
         <Switch>
             <Route path={`${match.path}/sign-in`} component={SignIn} /> 

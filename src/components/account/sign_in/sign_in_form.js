@@ -1,10 +1,29 @@
 import React from 'react';
-import { reduxForm } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
+import Input from '../../general/input';
 
 const SignInForm = props => {
+
+    console.log('Sign In Form Props:', props);
+    const {handleSubmit, signIn} = props;
+
     return(
-        <form>
-            <h1>Form Goes Here</h1>
+        <form onSubmit={handleSubmit(signIn)}>
+            
+            <div className="row">
+                <Field col="s12" id="email" name="email" component={Input} label="Email"/>
+            </div>
+            
+            <div className="row">
+                <Field col="s12" id="password" name="password" component={Input} type="password" label="Password"/>
+            </div>
+            
+                
+            <div className="row">
+                <div className="col s12 right-align">
+                    <button className="btn blue darken-2">Sign In</button>
+                </div>
+            </div>
         </form>
     );
 }
