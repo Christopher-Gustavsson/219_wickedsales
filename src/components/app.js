@@ -9,7 +9,7 @@ import Home from './home';
 import Nav from './nav';
 import NotFound from './404';
 import Cart from './cart';
-
+import AccountRoutes from "./account";
 
 class App extends Component {
     constructor(props){
@@ -50,6 +50,7 @@ class App extends Component {
                             return <ProductRoutes {...routingProps} updateCart={this.updateCartItems} />
                         }} />
                         <Route path="/cart" component={Cart} />
+                        <Route path="/account" component={AccountRoutes} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>
