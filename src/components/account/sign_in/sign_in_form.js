@@ -4,7 +4,7 @@ import Input from '../../general/input';
 
 const SignInForm = props => {
 
-    console.log('Sign In Form Props:', props);
+    // console.log('Sign In Form Props:', props);
     const {handleSubmit, signIn} = props;
 
     return(
