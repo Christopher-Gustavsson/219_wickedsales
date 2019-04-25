@@ -1,37 +1,29 @@
 import React, {Component }from 'react';
 import ProductItem from './product_item';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import {getAllProducts} from '../../actions/';
 
 class ProductList extends Component {
     constructor(props){
         super(props);
-
-        this.state ={
-            products: []
-        };
 
         this.goToDetails = this.goToDetails.bind(this);
     }
 
     componentDidMount()
     {
-        this.getProducts();
+        this.props.getAllProducts();
     }
 
     goToDetails(id){
         this.props.history.push(`/products/${id}`);
     }
 
-    getProducts(){
-        axios.get("/api/getproducts.php").then((resp) => {
-            this.setState({
-                products: resp.data.products
-            });
-        });  
-    }
-
     render(){
-        const productList = this.state.products.map((product) => {
+        console.log('Product List Props:', this.props);
+
+        const productList = this.props.products.map((product) => {
             return (
                 <ProductItem key={product.id} {...product} goToDetails={this.goToDetails}/>
             );
@@ -48,4 +40,12 @@ class ProductList extends Component {
     }
 }
 
-export default ProductList;
+function mapStateToProps(state){
+    return {
+        products: state.products.list
+    }
+}
+
+export default connect(mapStateToProps, {
+    getAllProducts: getAllProducts
+})(ProductList);
