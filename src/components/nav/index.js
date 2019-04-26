@@ -79,7 +79,7 @@ class Nav extends Component {
 
     render(){
         const links = this.renderLinks();
-        console.log("props:", this.props);
+        
 
         return(
             <Fragment>

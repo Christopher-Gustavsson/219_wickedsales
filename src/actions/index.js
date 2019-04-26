@@ -2,7 +2,7 @@ import types from "./types";
 import axios from "axios";
 
 export const checkAuth = () => async dispatch => {
-    const resp = await axios.get('/api/check-auth/php');
+    const resp = await axios.get('/api/check-auth.php');
 
     if(resp.data.success)
     {

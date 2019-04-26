@@ -11,6 +11,6 @@
         $output['emai'] = $_SESSION['user'];
     }
 
-    print json_encode($output);
+    print(json_encode($output));
 
 ?>
